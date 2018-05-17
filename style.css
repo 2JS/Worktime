@@ -1,0 +1,94 @@
+body {
+	font-family: "Do Hyeon";
+    background-color: #eee;
+}
+
+/*your code here*/
+h1 {
+	text-align: center;
+}
+
+table {
+	margin: 0 auto;
+	border-collapse: collapse;
+	width: 100%;
+	max-width: 1000px;
+    font-size: 20pt;
+}
+
+#jobTable {
+    text-align: center;
+}
+
+th {
+	font-weight: bold;
+	border-bottom: 2px solid black;
+	padding: 5px;
+}
+
+td {
+	border-bottom: 1px solid grey;
+	padding: 5px;
+}
+
+/* The top sticky bar */
+.navbar {
+    overflow: hidden;
+    background-color: #fff;
+}
+
+.topSticky {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+}
+
+.bottomSticky {
+    position: -webkit-sticky;
+    position: sticky;
+    bottom: 0;
+}
+
+.hidden {
+    height: 0;
+    overflow: hidden;
+}
+
+#timetable {
+	text-align: center;
+}
+
+#timetable a:hover {
+    font-weight: bold;
+}
+
+textarea {
+	font-size: 12pt;
+    width: 100%;
+    height: 100%;
+    padding: 6px 6px;
+    box-sizing: border-box;
+    background-color: #eee;
+    resize: none;
+    text-align: left;
+}
+
+textarea:focus {
+    background-color: white;
+}
+
+/* Spinner ----------- */
+.loader {
+    border: 4px solid #f3f3f3; /* Light grey */
+    border-top: 4px solid darkgray;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+/* ------------ Spinner */
