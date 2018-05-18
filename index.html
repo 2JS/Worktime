@@ -3,60 +3,23 @@
 <head>
 	<title>Worktime</title>
 	<link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
-	<link rel="stylesheet"
-      href="https://fonts.googleapis.com/css?family=Do Hyeon">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Do Hyeon">
     <link href="style.css" rel="stylesheet" />
-</head>
-<body>
-	<div class='navbar' align="center" id="topbar">
-		<h1>Worktime</h1>
-	</div>
-	<div class="navbar topSticky">
-		<table id="timetable">
-			<tr>
-				<th>Time</th><th>Mon</th><th>Tue</th><th>Wed</th><th>Thu</th><th>Fri</th>
-			</tr>
-		</table>
-		<br/>
-	</div>
-	<div id="jobContainer" class="navbar hidden">
-		<table id="jobTable">
-			<tbody>
-				<tr><td><span style="">고명찬<span></span></span></td><td>010-3383-4288</td></tr>
-				<tr><td><span style="">박건희<span></span></span></td><td>010-7307-0088</td></tr>
-				<tr><td><span style="">박병훈<span></span></span></td><td>010-7711-6788</td></tr>
-				<tr><td><span style="">백민기<span></span></span></td><td>010-6385-7523</td></tr>
-				<tr><td><span style="">안진웅<span></span></span></td><td>010-7517-5791</td></tr>
-				<tr><td><span style="">이민재<span></span></span></td><td>010-4165-1682</td></tr>
-				<tr><td><span style="">이재석<span></span></span></td><td>010-4427-7983</td></tr>
-				<tr><td><span style="">임재환<span></span></span></td><td>010-3165-1777</td></tr>
-				<tr><td><span style="">장민정<span></span></span></td><td>010-7275-0869</td></tr>
-				<tr><td><span style="">장원구<span></span></span></td><td>010-4799-5684</td></tr>
-				<tr><td><span style="">주소연<span></span></span></td><td>010-4890-2720</td></tr>
-			</tbody>
-		</table>
-	</div>
-	<div align="center" class="navbar" onclick="additionals(true)">
-		<img id="handle" src="assets/icons8-menu.png" height="20" style="cursor: pointer; padding-top: 5px;">
-	</div>
-	<div>
-		<table id='recordtable' size="width:70%">
-			<tr>
-				<th width="160px">Time</th>
-				<th width="100px">Author</th>
-                <th colspan="2">Message</th>
-			</tr>
-			<tr>
-				<td>New</td>
-				<td id='author'><input type="radio" checked="true">Anonymous</input></td>
-				<td><textarea rows="4" id="textfield" placeholder="Press Enter to Record"></textarea></td>
-				<td width="120px"><button onclick="recordInput()">Record</button></td>
-			</tr>
-			<tr>
-				<td colspan="4"><div align="center"><div class="loader"></div></div></td>
-			</tr>
-		</table>
-	</div>
+    </head>
+    <body>
+    <div id="topbar" class="navbar">
+        <div style="padding-left: 30px">
+            <h1>
+                <a>Worktime</a>
+                <a>Worktime</a>
+                <a>Worktime</a>
+            </h1>
+        </div>
+    </div>
+    <div class="sidebar">
+        <a>ABCD</a>
+        <a>EFGH</a>
+    </div>
 	<script src="https://www.gstatic.com/firebasejs/4.13.0/firebase.js"></script>
 	<script src="jquery/js/jquery-1.9.0.min.js"></script>
 	<script src="jquery/js/jquery-ui-1.10.0.custom.min.js"></script>
