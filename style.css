@@ -4,9 +4,6 @@ body {
 }
 
 /*your code here*/
-h1 {
-
-}
 
 table {
 	margin: 0 auto;
@@ -31,83 +28,64 @@ td {
 	padding: 5px;
 }
 
-/* The top sticky bar */
-.navbar {
-    overflow: hidden;
-    /*background-color: #fff;*/
+#main {
+    margin-top: 70px;
+    margin-left: 185px;
+    margin-right: auto;
 
-    position: fixed;
-    top: 0px;
-    left: 0px;
-    right: 0px;
-
-    margin-left: 0px;
-    margin-right: 0px;
+    padding: 16px;
 }
 
-.navbar a {
-    border: none;
-    padding: 20px 16px 20px 16px;
-    color: #2196F3;
-    background-color: #fff;
+
+/* Table based timetable */
+/*!*#timeTable td {*!*/
+    /*!*width: 50px;*!*/
+/*!*}*!*/
+
+/*.chart-container {*/
+    /*!*position: relative;*!*/
+    /*!*margin: auto;*!*/
+    /*!*height: 8vh;*!*/
+    /*!*widows: 8vw;*!*/
+    /*max-width: 200px;*/
+    /*max-height: 100px;*/
+    /*overflow: hidden;*/
+    /*!*align-content: center;*!*/
+    /*margin-left: -50px;*/
+/*}*/
+
+/*.chart-container-container {*/
+    /*max-width: 100px;*/
+    /*max-height: 100px;*/
+    /*overflow: hidden;*/
+    /*margin: 0px;*/
+/*}*/
+
+
+/* Grid based timetable*/
+#timetableContainer {
+    display: grid;
+    grid-template-columns: 100px auto auto auto auto auto;
+    max-width: 1200px;
 }
 
-.navbar a:hover {
-    color: #064579;
-    background-color: transparent;
-    cursor: pointer;
+#timetableContainer > div {
+    /*margin-left: -50px;*/
+    /*margin-right: -50px;*/
+    text-align: center;
+    font-size: 30pt;
 }
 
-.sidebar {
-    width: 200px;
-    position: fixed;
-    z-index: -1;
-
-    top: 0px;
-    bottom: 0px;
-    left: 0px;
-
-    background: #ffffff;
-
-    overflow-x: hidden;
-    overflow-y: scroll;
-    padding-top: 100px;
+.timetableHeader {
+    /*grid-column: span 2;*/
 }
 
-.sidebar a {
-    padding: 6px 8px 6px 16px;
-    text-decoration: none;
-    font-size: 25px;
-    color: #2196F3;
-    display: block;
+#workertableContainer {
+    display: grid;
+    grid-template-columns: 200px auto;
 }
 
-.sidebar a:hover {
-    color: #064579;
-    background-color: #eee;
-    cursor: pointer;
-}
-
-.topSticky {
-    /*position: -webkit-sticky;*/
-    /*position: sticky;*/
-    top: 0px;
-}
-
-.bottomSticky {
-    position: -webkit-sticky;
-    position: sticky;
-    bottom: 0px;
-}
-
-#timetable {
-	text-align: center;
-}
-
-#timetable a:hover {
-    font-weight: bold;
-}
-
+/* Record Tab */
 textarea {
 	font-size: 12pt;
     width: 100%;
@@ -122,6 +100,7 @@ textarea {
 textarea:focus {
     background-color: white;
 }
+
 
 /* Spinner ----------- */
 .loader {

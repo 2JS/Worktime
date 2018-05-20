@@ -1,5 +1,4 @@
-let timetable = document.getElementById('timetable')
-let jobTable = document.getElementById('jobTable')
+let workerTable = document.getElementById('workerTable')
 let recordtable = document.getElementById('recordtable')
 
 let textfield = document.getElementById('textfield')
@@ -111,4 +110,49 @@ function rowConstructor(key, value) {
 	}
 
 	return row
+}
+
+function workertableInsertHeader(day, hour) {
+    let header = document.createElement('h1')
+    header.innerHTML = weekdayTable[day] + " " + hour + " ~ " + (parseInt(hour) + 1)
+    header.classList.add('active')
+    workerTable.appendChild(header)
+}
+
+function workertableInsert(name) {
+    let entry = document.createElement('a')
+    entry.innerHTML = name
+    workerTable.appendChild(entry)
+}
+
+// Chart.js
+Chart.defaults.global.defaultFontFamily = 'Do Hyeon'
+
+function createChart(ctx, data) {
+    let chart = new Chart(ctx, {
+        type: 'doughnut',
+        data: {
+            labels: ["None", "One", "Both", "One", "None", "Future"],
+            datasets: [{
+                label: '# of Votes',
+                data: data,
+                backgroundColor: [
+                    'rgba(226, 78, 53, 1.0)',
+                    'rgba(253, 207, 0, 1.0)',
+                    'rgba(57, 174, 84, 1.0)',
+                    'rgba(253, 207, 0, 1.0)',
+                    'rgba(226, 78, 53, 1.0)',
+                ],
+                borderColor: 'rgba(238, 238, 238, 1.0)'
+            }]
+        },
+        options: {
+            legend: {
+                display: false,
+                // position: 'left',
+            }
+        }
+    })
+    // chart.canvas.parentNode.style.height = '100px'
+    chart.canvas.parentNode.style.width = '200px'
 }

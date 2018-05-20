@@ -2,24 +2,81 @@
 <html>
 <head>
 	<title>Worktime</title>
-	<link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Do Hyeon">
     <link href="style.css" rel="stylesheet" />
+    <link href="button.css" rel="stylesheet">
+    <link href="sidebar.css" rel="stylesheet">
+    <link href="topbar.css" rel="stylesheet">
     </head>
     <body>
-    <div id="topbar" class="navbar">
-        <div style="padding-left: 30px">
-            <h1>
-                <a>Worktime</a>
-                <a>Worktime</a>
-                <a>Worktime</a>
-            </h1>
+    <div id="topbar" class="topbar">
+        <span class="topbarElement">Worktime</span>
+        <a class="topbarElement" onclick="onclickTab(0)">Worker</a>
+        <a class="topbarElement" onclick="onclickTab(1)">Workflow</a>
+        <a class="topbarElement" onclick="onclickTab(2)">Record</a>
+        <a class="topbarElement" onclick="onclickTab(3)">Timetable</a>
+    </div>
+    <div id="workerTable" class="sidebar"></div>
+    <div id="main">
+        <div id="WorkerTab" class="tab">
+            <h1>Name</h1>
+            <div class="type-1">
+                <div>
+                    <a class="btn btn-1">
+                        <span class="txt">On Work</span>
+                        <span class="round"><i class="fa fa-chevron-right"></i></span>
+                    </a>
+                </div>
+            </div>
+            <br/>
+            <div class="type-1">
+                <div>
+                    <a class="btn btn-2">
+                        <span class="txt">Off Work</span>
+                        <span class="round"><i class="fa fa-chevron-right"></i></span>
+                    </a>
+                </div>
+            </div>
+
+            <div id="workertableContainer">
+                <div>
+                    <canvas id="chart1"></canvas>
+                </div>
+            </div>
+        </div>
+        <div id="WorkflowTab" class="tab"></div>
+        <div id="RecordTab" class="tab">
+            <table id='recordtable' size="width:70%">
+                <tr>
+                    <th width="160px">Time</th>
+                    <th width="160px">Author</th>
+                    <th colspan="2">Message</th>
+                </tr>
+                <tr>
+                    <td>New</td>
+                    <td id='author'><input type="radio" checked="true"/><label for="author">Anonymous</label></td>
+                    <td><textarea rows="4" id="textfield" placeholder="Press Enter to Record"></textarea></td>
+                    <td width="120px"><button onclick="recordInput()">Record</button></td>
+                </tr>
+            </table>
+        </div>
+        <div id="TimetableTab" class="tab">
+            <div id="timetableContainer">
+                <div></div>
+                <div class="timetableHeader">Mon</div>
+                <div class="timetableHeader">Tue</div>
+                <div class="timetableHeader">Wed</div>
+                <div class="timetableHeader">Thu</div>
+                <div class="timetableHeader">Fri</div>
+                <div style="grid-area: 2/1/span 1/ span 1">4 ~ 5</div>
+                <div style="grid-area: 3/1/span 1/ span 1">5 ~ 6</div>
+                <div style="grid-area: 4/1/span 1/ span 1">7 ~ 8</div>
+                <div style="grid-area: 5/1/span 1/ span 1">8 ~ 9</div>
+            </div>
         </div>
     </div>
-    <div class="sidebar">
-        <a>ABCD</a>
-        <a>EFGH</a>
-    </div>
+    <script src="Chart/Chart.bundle.js"></script>
 	<script src="https://www.gstatic.com/firebasejs/4.13.0/firebase.js"></script>
 	<script src="jquery/js/jquery-1.9.0.min.js"></script>
 	<script src="jquery/js/jquery-ui-1.10.0.custom.min.js"></script>

@@ -1,0 +1,49 @@
+/* The top sticky bar */
+.topbar {
+    overflow: hidden;
+    background-color: #fff;
+
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+
+    height: 70px;
+
+    padding-left: 30px;
+}
+
+.topbarElement {
+    border: none;
+
+    padding: 16px 16px;
+
+    float: left;
+    text-align: center;
+    text-decoration: none;
+}
+
+span.topbarElement {
+    font-size: 30px;
+}
+
+a.topbarElement {
+    font-size: 30px;
+}
+
+a.topbarElement:hover {
+    color: #8a8a8a;
+    background-color: #eeeeee;
+    cursor: pointer;
+}
+
+a.topbarElement.active {
+    background-color: #eeeeee;
+    color: #2196F3;
+
+    border-top-style: solid;
+    border-top-color: #2196F3;
+    border-top-width: 4px;
+
+    padding-top: 12px;
+}
